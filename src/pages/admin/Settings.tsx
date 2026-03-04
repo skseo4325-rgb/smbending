@@ -12,6 +12,7 @@ export default function Settings() {
   const handleConfirmSave = () => {
     // Save logic would go here
     setIsConfirmDialogOpen(false);
+    alert('설정이 성공적으로 저장되었습니다.');
   };
 
   const handleCancelSave = () => {

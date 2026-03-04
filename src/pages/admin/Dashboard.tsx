@@ -3,10 +3,10 @@ import { motion } from 'motion/react';
 
 export default function Dashboard() {
   const stats = [
-    { label: '총 방문자 수', value: '12,450', change: '+12.5%', isPositive: true, icon: <Users className="w-6 h-6 text-blue-600" /> },
-    { label: '페이지 뷰', value: '45,210', change: '+8.2%', isPositive: true, icon: <Eye className="w-6 h-6 text-emerald-600" /> },
-    { label: '새로운 문의', value: '124', change: '-2.4%', isPositive: false, icon: <FileText className="w-6 h-6 text-amber-600" /> },
-    { label: '전환율', value: '3.2%', change: '+1.1%', isPositive: true, icon: <TrendingUp className="w-6 h-6 text-purple-600" /> },
+    { label: '총 방문자 수', value: '0', change: '0%', isPositive: true, icon: <Users className="w-6 h-6 text-blue-600" /> },
+    { label: '페이지 뷰', value: '0', change: '0%', isPositive: true, icon: <Eye className="w-6 h-6 text-emerald-600" /> },
+    { label: '새로운 문의', value: '0', change: '0%', isPositive: true, icon: <FileText className="w-6 h-6 text-amber-600" /> },
+    { label: '전환율', value: '0%', change: '0%', isPositive: true, icon: <TrendingUp className="w-6 h-6 text-purple-600" /> },
   ];
 
   return (
@@ -53,26 +53,10 @@ export default function Dashboard() {
             <button className="text-sm text-blue-600 font-medium hover:text-blue-700">전체 보기</button>
           </div>
           <div className="divide-y divide-gray-200">
-            {[
-              { name: '김철수', company: '(주)대한건설', date: '2023-10-25', status: '대기중' },
-              { name: '이영희', company: '미래산업', date: '2023-10-24', status: '답변완료' },
-              { name: '박지성', company: '글로벌테크', date: '2023-10-23', status: '답변완료' },
-              { name: '최동원', company: '한국엔지니어링', date: '2023-10-22', status: '진행중' },
-            ].map((inquiry, i) => (
-              <div key={i} className="px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors">
-                <div>
-                  <p className="text-sm font-medium text-gray-900">{inquiry.name} <span className="text-gray-500 font-normal ml-2">{inquiry.company}</span></p>
-                  <p className="text-xs text-gray-500 mt-1">{inquiry.date}</p>
-                </div>
-                <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                  inquiry.status === '대기중' ? 'bg-amber-100 text-amber-800' :
-                  inquiry.status === '진행중' ? 'bg-blue-100 text-blue-800' :
-                  'bg-emerald-100 text-emerald-800'
-                }`}>
-                  {inquiry.status}
-                </span>
-              </div>
-            ))}
+            <div className="px-6 py-12 text-center text-gray-500">
+              <FileText className="w-12 h-12 mx-auto text-gray-300 mb-3" />
+              <p>최근 문의 내역이 없습니다.</p>
+            </div>
           </div>
         </div>
 

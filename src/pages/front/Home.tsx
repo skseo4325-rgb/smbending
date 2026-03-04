@@ -42,12 +42,12 @@ export default function Home() {
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1565439390115-08a5141e63d0?q=80&w=2070&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2069&auto=format&fit=crop" 
             alt="Bending Machine" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-60"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gray-900/70"></div>
+          <div className="absolute inset-0 bg-gray-900/80"></div>
         </div>
         
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
@@ -64,7 +64,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto font-light"
+            className="text-lg sm:text-xl text-gray-300 mb-10 mx-auto font-light whitespace-normal sm:whitespace-nowrap"
           >
             최첨단 설비와 30년의 노하우로 고객의 요구에 부합하는 완벽한 벤딩 가공 솔루션을 제공합니다.
           </motion.p>
